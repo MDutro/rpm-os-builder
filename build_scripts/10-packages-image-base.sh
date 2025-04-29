@@ -50,14 +50,7 @@ dnf -y install @multimedia gstreamer1-plugins-{bad-free,bad-free-libs,good,base}
 # 	"sane-backends-drivers-scanners" \
 # 	"yelp-tools"
 
-dnf -y install \
-	ptyxis \
-	plymouth \
-	plymouth-system-theme \
-	fwupd \
-	systemd-{resolved,container,oomd} \
-	libcamera{,-{v4l2,gstreamer,tools}} \
-	ffmpegthumbnailer
-
+dnf -y install ptyxis 
+	
 # This package adds "[systemd] Failed Units: *" to the bashrc startup
 dnf -y remove console-login-helper-messages
