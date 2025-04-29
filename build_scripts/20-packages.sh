@@ -24,8 +24,8 @@ dnf -y install \
 	# tailscale
 
 
-# dnf config-manager --add-repo "https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/epel-$MAJOR_VERSION_NUMBER/ublue-os-packages-epel-$MAJOR_VERSION_NUMBER.repo"
-# dnf config-manager --set-disabled "copr:copr.fedorainfracloud.org:ublue-os:packages"
+dnf config-manager --add-repo "https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/epel-$MAJOR_VERSION_NUMBER/ublue-os-packages-epel-$MAJOR_VERSION_NUMBER.repo"
+dnf config-manager --set-disabled "copr:copr.fedorainfracloud.org:ublue-os:packages"
 # dnf -y --enablerepo copr:copr.fedorainfracloud.org:ublue-os:packages swap \
 # 	centos-logos bluefin-logos
 
