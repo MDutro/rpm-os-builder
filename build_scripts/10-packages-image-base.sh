@@ -2,6 +2,7 @@
 
 set -xeuo pipefail
 
+mkdir /var/roothome
 # This is the base for a minimal GNOME system on CentOS Stream.
 
 # This thing slows down downloads A LOT for no reason
