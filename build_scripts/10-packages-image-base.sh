@@ -22,35 +22,36 @@ dnf versionlock add kernel kernel-devel kernel-devel-matched kernel-core kernel-
 dnf -y install @multimedia gstreamer1-plugins-{bad-free,bad-free-libs,good,base} lame{,-libs} libjxl
 
 # `dnf group info Workstation` without GNOME
-dnf group install -y --nobest \
-	-x rsyslog* \
-	-x cockpit \
-	-x cronie* \
-	-x crontabs \
-	-x PackageKit \
-	-x PackageKit-command-not-found \
-	"Common NetworkManager submodules" \
-	"Core" \
-	"Fonts" \
-	"Guest Desktop Agents" \
-	"Hardware Support" \
-	"Printing Client" \
-	"Standard" \
-	"Workstation product core"
+# dnf group install -y --nobest \
+# 	-x rsyslog* \
+# 	-x cockpit \
+# 	-x cronie* \
+# 	-x crontabs \
+# 	-x PackageKit \
+# 	-x PackageKit-command-not-found \
+# 	"Common NetworkManager submodules" \
+# 	"Core" \
+# 	"Fonts" \
+# 	"Guest Desktop Agents" \
+# 	"Hardware Support" \
+# 	"Printing Client" \
+# 	"Standard" \
+# 	"Workstation product core"
 
 # Minimal GNOME group. ("Multimedia" adds most of the packages from the GNOME group. This should clear those up too.)
 # In order to reproduce this, get the packages with `dnf group info GNOME`, install them manually with dnf install and see all the packages that are already installed.
 # Other than that, I've removed a few packages we didnt want, those being a few GUI applications.
-dnf -y install \
-	-x PackageKit \
-	-x PackageKit-command-not-found \
-	"NetworkManager-adsl" \
-	"libsane-hpaio" \
-	"ptyxis" \
-	"sane-backends-drivers-scanners" \
-	"yelp-tools"
+# dnf -y install \
+# 	-x PackageKit \
+# 	-x PackageKit-command-not-found \
+# 	"NetworkManager-adsl" \
+# 	"libsane-hpaio" \
+# 	"ptyxis" \
+# 	"sane-backends-drivers-scanners" \
+# 	"yelp-tools"
 
 dnf -y install \
+	ptyxis \
 	plymouth \
 	plymouth-system-theme \
 	fwupd \
