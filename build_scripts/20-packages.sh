@@ -3,23 +3,17 @@
 set -xeuo pipefail
 
 dnf -y remove \
-	setroubleshoot
+	setroubleshoot \
+	power-profiles-daemon
 
 dnf -y install \
 	-x system-reinstall-bootc \
-	distrobox \
 	fastfetch \
-	fpaste \
-	just \
 	powertop \
 	tuned-ppd \
-	fzf \
 	glow \
-	wl-clipboard \
 	gum \
 	jetbrains-mono-fonts-all \
-	buildah \
-        xhost
 
 # Everything that depends on external repositories should be after this.
 # Make sure to set them as disabled and enable them only when you are going to use their packages.
