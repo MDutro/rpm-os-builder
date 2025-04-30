@@ -11,6 +11,14 @@ set -ouex pipefail
 
 # remove Gnome
 dnf5 -y group remove gnome-desktop
+dnf5 -y remove gnome-calculator  \
+    gnome-software  \
+    gnome-tweaks \
+    gnome-system-monitor \
+    nautilus \
+    thunderbird \
+    
+
 
 # this installs a package from fedora repos
 dnf5 install -y tmux 
