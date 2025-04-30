@@ -11,14 +11,6 @@ set -ouex pipefail
 
 # remove Gnome
 dnf5 -y group remove gnome-desktop
-dnf5 -y remove gnome-calculator  \
-    gnome-software  \
-    gnome-tweaks \
-    gnome-system-monitor \
-    nautilus \
-    thunderbird \
-    
-
 
 # this installs a package from fedora repos
 dnf5 install -y tmux 
@@ -27,6 +19,14 @@ dnf5 -y remove gdm gnome-shell gnome-session
 
 dnf5 copr enable -y ryanabx/cosmic-epoch
 dnf5 -y install @cosmic-desktop @cosmic-desktop-apps
+
+#  remove duplicate applications
+dnf5 -y remove gnome-calculator  \
+    gnome-software  \
+    gnome-tweaks \
+    gnome-system-monitor \
+    nautilus \
+    thunderbird \
 dnf5 clean all
 
 # Use a COPR Example:
