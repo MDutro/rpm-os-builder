@@ -27,6 +27,7 @@ dnf5 -y remove gnome-calculator  \
     gnome-system-monitor \
     nautilus \
     thunderbird \
+
 dnf5 clean all
 
 # Use a COPR Example:
