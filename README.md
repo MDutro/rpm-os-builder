@@ -1,4 +1,10 @@
-# image-template
+# Project Bluefin... But COSMIC!
+
+This repo is my custom image of Bluefin with the COSMIC desktop environment, created by System76. The build process removes the Gnome desktop environment, adds COSMIC, and does some housekeeping to remove most Gnome applications and favor those created by System76 to work with COSMIC. In other respects, the image is identical to Bluefin and includes all the goodies built into the Bluefin images. Documentation for Bluefin will apply to this image.
+
+If you would like to build your own OS images, checkout the original text of the image builder template repository README which appears below...
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Purpose
 
